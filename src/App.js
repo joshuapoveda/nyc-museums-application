@@ -3,11 +3,11 @@ import './App.css';
 
 function App() {
   //define state
-  const [city, setCity] = useState(null)
+  const [museum, setMuseum] = useState(null)
 
   //const rootUrl = 'https://api.teleport.org/api/cities/?search=san%20francisco'
 
-  const getCity = async () => {
+  const getMuseum = async () => {
     //make fetch request and store response
     try{
     const response = await fetch(
@@ -15,25 +15,25 @@ function App() {
     );
     //parse JSON response into a js object
     const data = await response.json();
-    setCity(data);
+    return data[0].name
     } catch(e){
       console.error(e)
     }
   };
   
-  useEffect(()=>{getCity()},[])
+  useEffect(()=>{getMuseum().then(response =>{
+    setMuseum(response)
+  })},[])
   
-  console.log(city)
-  console.log(typeof city)
+  console.log(museum)
+
   
   
 
   return (
     <div className="App">
       <h1>Hello World</h1>
-      <ul>
-
-      </ul>
+      <h2>{museum}</h2>
     </div>
   );
 }
