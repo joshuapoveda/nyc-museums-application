@@ -1,7 +1,8 @@
 import "./App.css";
 import Display from "./components/Display";
-
 import Form from "./components/Form";
+import Filter from "./components/Filter";
+
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -30,12 +31,12 @@ export default function App() {
     getMuseums();
   }, []);
   //{museums ? <Filter data={museums}></Filter> : <div></div>}
+  //{museums ? <Display items={museums}></Display> : <div></div>}
   return (
     <div className="App">
       <h1>MUSEUM HAT</h1>
       {museums ? <Form data={museums}></Form> : <div></div>}
-
-      {museums ? <Display items={museums}></Display> : <div></div>}
+      {museums ? <Filter data={museums}></Filter> : <div></div>}
     </div>
   );
 }
