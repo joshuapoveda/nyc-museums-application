@@ -2,9 +2,10 @@ import "./App.css";
 import Display from "./components/Display";
 import Filter from "./components/Filter";
 import { useState, useEffect } from "react";
+import Form from "./components/Form";
 
 export default function App() {
-  const [museums, setMuseum] = useState([[]]);
+  const [museums, setMuseum] = useState();
 
     const getMuseums = async () => {
       try {
@@ -12,7 +13,7 @@ export default function App() {
           `https://data.cityofnewyork.us/resource/fn6f-htvy.json`
         );
         const data = await response.json();
-        console.log(data)
+        //console.log(data)
         const museumItems = data.map((museums) => ({
           name: museums.name,
           adress: museums.adress1,
@@ -29,12 +30,12 @@ export default function App() {
   useEffect(() => {
     getMuseums()
   }, []);
-
+  
   return (
     <div className="App">
-      <h1>Museums</h1>
-      <Filter data={museums}></Filter>
-      <Display items={museums}></Display>
+      <h1>MUSEUM HAT</h1>
+      <Form></Form>
+      {museums ? <Filter data={museums}></Filter> : <div></div>}
     </div>
   );
 }
