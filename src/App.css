@@ -1,10 +1,55 @@
-
-h1 {
-  color: rgb(32, 184, 133);
-  font-size: 32px;
+body {
+  background-color: rgb(206, 235, 231);
+}
+.main-container {
+  border: solid 3px red;
+  display: flex;
+  justify-content: space-around;
+}
+.heading {
+  color: rgb(177, 67, 34);
+  font-size: 75px;
+  font-family: "advancefont";
+  padding: 0;
+  margin: 0;
+  border: solid 3px rgb(144, 226, 43);
 }
 
-.cards{
+.blurb {
+  border: solid 3px yellow;
+  font-family: futura;
+  font-size: 20px;
+  width: 40%;
+}
+
+.cards {
   border: solid 2px blue;
-  margin:   15px;
+  margin: 15px;
 }
+
+@font-face {
+  font-family: "advancefont";
+  src: url("//2ttf.com/webfont/C7krpNB3zqC/webfont.ttf") format("truetype");
+}
+.parallax{
+display:flex;
+}
+
+img{
+  border: solid 8px pink;
+  width: 80%;
+  margin: 0 auto;
+
+}
+.label {
+  font-family: "advancefont";
+  font-size: 40px;
+  border: dotted 3px blueviolet;
+  display: flex;
+  justify-content: center;
+}
+.dropper {
+  display: block;
+  margin: 0 auto;
+}
+
