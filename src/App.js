@@ -13,7 +13,6 @@ export default function App() {
         `https://data.cityofnewyork.us/resource/fn6f-htvy.json`
       );
       const data = await response.json();
-      //console.log(data);
       const museumItems = data.map((museums) => ({
         name: museums.name,
         adress: museums.adress1,
@@ -38,7 +37,7 @@ export default function App() {
 
       <div className="main-container">
         <p className="heading">MUSEUM HAT</p>
-        <p className="blurb">Is a quick an painless way to choose an arts institution in one of the culture captials of the world.</p>
+        <p className="blurb">A quick and painless way to choose an artsy outing in one of the culture captials of the world, N.Y.C.</p>
       </div>
 
         {museums ? <Form data={museums}></Form> : <div></div>}
