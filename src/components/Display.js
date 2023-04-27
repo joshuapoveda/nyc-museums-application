@@ -4,7 +4,7 @@ export default function Display(props) {
   const items = data.map((museums,index) => {
       return (
           <div className="cards" key={index}>
-        <a href={museums.url}>
+        <a href={museums.url} target="_blank">
           <p>{museums.name}</p>
         </a>
         <p>{museums.adress}</p>

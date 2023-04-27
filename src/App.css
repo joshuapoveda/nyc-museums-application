@@ -1,5 +1,6 @@
 body {
-  background-color: #a2d729;
+  background-color: #73A580;
+  overflow: scroll;
 }
 @font-face {
   font-family: "advancefont";
@@ -7,19 +8,19 @@ body {
 }
 .parallax {
   display: flex;
-  border: solid 4px yellow;
-  background-color: #2f0a28;
+  background-color: #001b2e;;
   padding: 20px;
 }
 img {
   border: solid 8px pink;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  margin-top: 10px;
 }
 .main-container {
-  border: solid 3px red;
   display: flex;
   justify-content: space-around;
+  background-color: #001b2e;
 }
 .heading {
   color: #ed6a5a;
@@ -27,30 +28,30 @@ img {
   font-family: "advancefont";
   padding: 30px;
   margin: 0;
-  border: solid 3px rgb(19, 19, 19);
 }
-
 .blurb {
-  border: solid 3px yellow;
   font-family: futura;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
+  padding: 10px;
   width: 40%;
-  color: #001b2e;
+  color: #EEE2DF
 }
 
 .options{
   display: flex;
   justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.label {
+label {
   font-family: "advancefont";
   font-size: 40px;
-  border: dotted 3px blueviolet;
   display: flex;
   justify-content: center;
-  color: #001b2e;
+  color: #2F0A28;
+  margin-bottom: -10px;
 }
 
 .button {

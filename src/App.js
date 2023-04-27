@@ -37,10 +37,12 @@ export default function App() {
 
       <div className="main-container">
         <p className="heading">MUSEUM HAT</p>
-        <p className="blurb">A quick and painless way to choose an artsy outing in one of the culture captials of the world, N.Y.C.</p>
+        <p className="blurb">A quick and painless way to choose a museum in one of the culture captials of the world: N.Y.C.</p>
       </div>
 
         {museums ? <Form data={museums}></Form> : <div></div>}
     </div>
   );
 }
+
+

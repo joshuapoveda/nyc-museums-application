@@ -20,7 +20,7 @@ export default function Form(props) {
   return (
     <div>
       <div className="options">
-        <div className="label">
+        <div >
           <form>
             <label>BY BOROUGH</label>
             <br></br>
@@ -35,7 +35,7 @@ export default function Form(props) {
           </form>
         </div>
 
-        <div className="label">
+        <div >
           <form>
             <label>OR AT RANDOM</label>
             <br></br>
