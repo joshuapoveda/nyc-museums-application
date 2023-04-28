@@ -16,13 +16,12 @@ export default function Form(props) {
     setChoice(randInt);
   };
 
-
   return (
     <div>
       <div className="options">
-        <div >
+        <div>
           <form>
-            <label>BY BOROUGH</label>
+            <label>BOROUGH</label>
             <br></br>
             <select className="button" onChange={borroughChoice}>
               <option value="All">All</option>
@@ -35,9 +34,9 @@ export default function Form(props) {
           </form>
         </div>
 
-        <div >
+        <div>
           <form>
-            <label>OR AT RANDOM</label>
+            <label>RANDOM</label>
             <br></br>
             <button className="button" type="button" onClick={getRandomInt}>
               Click Me
