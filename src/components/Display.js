@@ -1,6 +1,7 @@
+
 export default function Display(props) {
   const data = props.itemsArr;
-
+ 
   const cards = data.map((museums, index) => {
     return (
       <div className="cards" key={index}>
@@ -10,6 +11,9 @@ export default function Display(props) {
         <p>{museums.adress}</p>
         <p>{museums.city}</p>
         <p>{museums.tel}</p>
+        <p>{museums.coordsLong}</p>
+        <p>{museums.coordsLat}</p>
+        <button>Click</button>
       </div>
     );
   });

@@ -2,6 +2,7 @@ import Display from "./Display";
 
 export default function Filter(props) {
   const museums = props.data;
+  console.log(museums);
   const choice = props.choice;
   const finalArr = [];
 
@@ -13,6 +14,8 @@ export default function Filter(props) {
         city: choicePicks.city,
         url: choicePicks.url,
         tel: choicePicks.tel,
+        coordsLong: choicePicks.coords[0],
+        coordsLat: choicePicks.coords[1],
         key: index,
       });
     } else if (choice === "All") {
@@ -22,6 +25,8 @@ export default function Filter(props) {
         city: choicePicks.city,
         url: choicePicks.url,
         tel: choicePicks.tel,
+        coordsLong: choicePicks.coords[0],
+        coordsLat: choicePicks.coords[1],
         key: index,
       });
     } else if (index === choice) {
@@ -31,6 +36,8 @@ export default function Filter(props) {
         city: choicePicks.city,
         url: choicePicks.url,
         tel: choicePicks.tel,
+        coordsLong: choicePicks.coords[0],
+        coordsLat: choicePicks.coords[1],
         key: index,
       });
     }

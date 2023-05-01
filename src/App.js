@@ -1,7 +1,23 @@
 import "./App.css";
+import Museum_Hat from "./img/Museum_Hat.jpg";
 import Form from "./components/Form";
 import { useState, useEffect } from "react";
-import Museum_Hat from "./img/Museum_Hat.jpg";
+// import {
+//   interaction,
+//   layer,
+//   custom,
+//   control,
+//   Interactions,
+//   Overlays,
+//   Controls,
+//   Map,
+//   Layers,npm
+//   Overlay,
+//   Util,
+//   Tile,
+//   Vector,
+// } from "react-openlayers";
+import MapImg from "./components/MapImg";
 
 export default function App() {
   const [museums, setMuseum] = useState();
@@ -18,6 +34,7 @@ export default function App() {
         city: museums.city,
         url: museums.url,
         tel: museums.tel,
+        coords: museums.the_geom.coordinates,
       }));
       setMuseum(museumItems);
     } catch (e) {
@@ -28,12 +45,13 @@ export default function App() {
     getMuseums();
   }, []);
 
+  //longitude, latitude
+  //const place = [-73.92079629906307, 40.644340681393366];
   return (
     <div className="App">
       <div className="parallax">
         <img src={Museum_Hat} alt="Museum Hat Mascot" />
       </div>
-
       <div className="main-container">
         <p className="heading">MUSEUM HAT</p>
         <p className="blurb">
@@ -41,9 +59,15 @@ export default function App() {
           captials of the world: N.Y.C.
         </p>
       </div>
-
+      {/* <div className="map-container">
+        <Map view={{ projection: "EPSG:4326", center: place, zoom: 18 }}>
+          <Layers>
+            <layer.Tile></layer.Tile>
+          </Layers>
+        </Map>
+      </div> */}
+      <MapImg></MapImg>
       {museums ? <Form data={museums}></Form> : <div></div>}
-      
     </div>
   );
 }
