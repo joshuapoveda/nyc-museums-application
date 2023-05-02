@@ -1,18 +1,13 @@
 import {
-  interaction,
   layer,
-  custom,
   control,
   Interactions,
-  Overlays,
   Controls,
   Map,
   Layers,
-  Overlay,
-  Util,
-  Tile,
-  Vector,
 } from "react-openlayers"
+
+
 
 export default function MapImg(props) {
   const place = props.coords;
