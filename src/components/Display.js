@@ -29,7 +29,7 @@ export default function Display(props) {
       </div>
     );
   });
-  console.log(coordsProp)
+
   useEffect(()=>{
     setCardsProp(cards)
   },[])

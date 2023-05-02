@@ -91,7 +91,6 @@ label {
 .openlayers-map {
   height: 300px;
   width: 90%;
-  min-width: 399px;
 }
 
 .map-container {
