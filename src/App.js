@@ -2,21 +2,6 @@ import "./App.css";
 import Museum_Hat from "./img/Museum_Hat.jpg";
 import Form from "./components/Form";
 import { useState, useEffect } from "react";
-// import {
-//   interaction,
-//   layer,
-//   custom,
-//   control,
-//   Interactions,
-//   Overlays,
-//   Controls,
-//   Map,
-//   Layers,npm
-//   Overlay,
-//   Util,
-//   Tile,
-//   Vector,
-// } from "react-openlayers";
 
 export default function App() {
   const [museums, setMuseum] = useState();
