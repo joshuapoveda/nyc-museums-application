@@ -17,7 +17,6 @@ import { useState, useEffect } from "react";
 //   Tile,
 //   Vector,
 // } from "react-openlayers";
-import MapImg from "./components/MapImg";
 
 export default function App() {
   const [museums, setMuseum] = useState();
@@ -66,7 +65,7 @@ export default function App() {
           </Layers>
         </Map>
       </div> */}
-      <MapImg></MapImg>
+
       {museums ? <Form data={museums}></Form> : <div></div>}
     </div>
   );

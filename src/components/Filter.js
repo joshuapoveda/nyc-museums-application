@@ -2,7 +2,6 @@ import Display from "./Display";
 
 export default function Filter(props) {
   const museums = props.data;
-  console.log(museums);
   const choice = props.choice;
   const finalArr = [];
 

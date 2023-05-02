@@ -14,12 +14,11 @@ import {
   Vector,
 } from "react-openlayers";
 
-export default function MapImg() {
-
-  const place = [-73.99392890421056, 40.738015384101416];
-
+export default function MapImg(props) {
+  const place = props.coords;
+  console.log(props.coords);
   return (
-    <>
+    <div>
       <div className="map-container">
         <Map view={{ projection: "EPSG:4326", center: place, zoom: 18 }}>
           <Layers>
@@ -27,6 +26,7 @@ export default function MapImg() {
           </Layers>
         </Map>
       </div>
-    </>
+      <div className="card-container">{props.cards}</div>;
+    </div>
   );
 }
