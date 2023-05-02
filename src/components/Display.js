@@ -8,25 +8,28 @@ export default function Display(props) {
   const data = props.itemsArr;
 
   const coordsFunc = (e) =>{
-    console.log(e.target)
-    setCoordsProp([e.target.children[4].innerText,e.target.children[5].innerText])
+    console.log(e.currentTarget.children[4].innerText)
+    setCoordsProp([parseFloat(e.currentTarget.children[4].innerText),parseFloat(e.currentTarget.children[5].innerText)])
   }
 
   const cards = data.map((museums, index) => {
     return (
       <div className="cards" key={index} onClick={coordsFunc}>
+        
         <a href={museums.url} target="_blank">
           <p>{museums.name}</p>
         </a>
         <p>{museums.adress}</p>
         <p>{museums.city}</p>
         <p>{museums.tel}</p>
-        <p className="none">{museums.coordsLong}</p>
+
+        <button name="map-btn">{museums.coordsLong} {museums.coordsLat}</button>
         <p className="none">{museums.coordsLat}</p>
+        <p className="none">{museums.coordsLong}</p>
       </div>
     );
   });
-
+  console.log(coordsProp)
   useEffect(()=>{
     setCardsProp(cards)
   },[])
@@ -34,8 +37,7 @@ export default function Display(props) {
   return (
     <div>
       <MapImg coords={coordsProp} cards={cardsProp}></MapImg>
-      <div className="card-container">{cards}</div>;
-      {/* <div className="point"></div> */}
+      <div className="card-container">{cards}</div>
     </div>
   );
 }

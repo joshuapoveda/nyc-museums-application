@@ -50,7 +50,6 @@ export default function App() {
     <div className="App">
       <div className="parallax">
         <img src={Museum_Hat} alt="Museum Hat Mascot" />
-       
       </div>
       <div className="main-container">
         <p className="heading">MUSEUM HAT</p>
@@ -59,16 +58,7 @@ export default function App() {
           captials of the world: N.Y.C.
         </p>
       </div>
-      {/* <div className="map-container">
-        <Map view={{ projection: "EPSG:4326", center: place, zoom: 18 }}>
-          <Layers>
-            <layer.Tile></layer.Tile>
-          </Layers>
-        </Map>
-      </div> */}
-
       {museums ? <Form data={museums}></Form> : <div></div>}
-      <div className="point"></div>
     </div>
   );
 }

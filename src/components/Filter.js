@@ -15,6 +15,7 @@ export default function Filter(props) {
         tel: choicePicks.tel,
         coordsLong: choicePicks.coords[0],
         coordsLat: choicePicks.coords[1],
+        coordsArr: [choicePicks.coords[0], choicePicks.coords[1]],
         key: index,
       });
     } else if (choice === "All") {
@@ -26,6 +27,7 @@ export default function Filter(props) {
         tel: choicePicks.tel,
         coordsLong: choicePicks.coords[0],
         coordsLat: choicePicks.coords[1],
+        coordsArr: [choicePicks.coords[0], choicePicks.coords[1]],
         key: index,
       });
     } else if (index === choice) {
@@ -37,6 +39,7 @@ export default function Filter(props) {
         tel: choicePicks.tel,
         coordsLong: choicePicks.coords[0],
         coordsLat: choicePicks.coords[1],
+        coordsArr: [choicePicks.coords[0], choicePicks.coords[1]],
         key: index,
       });
     }

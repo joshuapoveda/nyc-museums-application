@@ -44,7 +44,6 @@ export default function Form(props) {
           </form>
         </div>
       </div>
-
       {museums ? <Filter choice={choice} data={museums}></Filter> : <div></div>}
     </div>
   );
