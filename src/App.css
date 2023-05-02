@@ -94,7 +94,6 @@ label {
 }
 
 .map-container {
-  /* pointer-events: none; */
   position: sticky;
   top: 0;
   border: solid 4px #001b2e;
