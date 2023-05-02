@@ -23,6 +23,7 @@ export default function MapImg(props) {
         <Map
           className="map-item"
           view={{ projection: "EPSG:4326", center: place, zoom: 17.5 }}
+          style={{ height: "400px", width: "400px" }}
         >
           <Controls>
             <control.FullScreen />
