@@ -50,6 +50,7 @@ export default function App() {
     <div className="App">
       <div className="parallax">
         <img src={Museum_Hat} alt="Museum Hat Mascot" />
+       
       </div>
       <div className="main-container">
         <p className="heading">MUSEUM HAT</p>
@@ -67,6 +68,7 @@ export default function App() {
       </div> */}
 
       {museums ? <Form data={museums}></Form> : <div></div>}
+      <div className="point"></div>
     </div>
   );
 }
