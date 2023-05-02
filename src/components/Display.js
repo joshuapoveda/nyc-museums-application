@@ -42,7 +42,7 @@ export default function Display(props) {
 
   return (
     <div>
-      <MapImg coords={coordsProp} cards={cardsProp}></MapImg>
+      {/* <MapImg coords={coordsProp} cards={cardsProp}></MapImg> */}
       <div className="card-container">{cards}</div>
     </div>
   );
