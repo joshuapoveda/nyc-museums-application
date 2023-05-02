@@ -1,4 +1,3 @@
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
 import {
   interaction,
   layer,
@@ -13,7 +12,7 @@ import {
   Util,
   Tile,
   Vector,
-} from "react-openlayers";
+} from "react-openlayers"
 
 export default function MapImg(props) {
   const place = props.coords;
