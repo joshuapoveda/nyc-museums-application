@@ -3,6 +3,7 @@ import Museum_Hat from "./img/Museum_Hat.jpg";
 import Form from "./components/Form";
 
 import { useState, useEffect } from "react";
+import MapImg from "./components/MapImg";
 
 export default function App() {
   const [museums, setMuseum] = useState();
@@ -34,7 +35,6 @@ export default function App() {
   //const place = [-73.92079629906307, 40.644340681393366];
   return (
     <div className="App">
-      
       <div className="parallax">
         <img src={Museum_Hat} alt="Museum Hat Mascot" />
       </div>
@@ -42,9 +42,11 @@ export default function App() {
         <p className="heading">MUSEUM HAT</p>
         <p className="blurb">
           A quick and painless way to choose a museum in one of the culture
-          captials of the world: N.Y.C.
+          captials of the world: N.Y.C.<br></br>
+          <span>*Note: click on the pin to track its location.</span>
         </p>
       </div>
+      {/* <MapImg></MapImg> */}
       {museums ? <Form data={museums}></Form> : <div></div>}
     </div>
   );

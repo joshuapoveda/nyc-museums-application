@@ -88,25 +88,20 @@ label {
   background-color: #ed6a5a;
 }
 
-.openlayers-map {
-  height: 300px;
-  width: 90%;
+.leaflet-contaiitner {
+  height: 350px;
+  border: solid 4px #001b2e;
 }
 
-.map-container {
+.sticky {
   position: sticky;
   top: 0;
-  border: solid 4px #001b2e;
 }
 
 .none {
   display: none;
 }
 
-.point {
-  background: red;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  z-index: 1;
+span {
+  color: #e89f21;
 }
