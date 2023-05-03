@@ -32,7 +32,7 @@ export default function App() {
   }, []);
 
   //longitude, latitude
-  //const place = [-73.92079629906307, 40.644340681393366];
+  //[-73.92079629906307, 40.644340681393366];
   return (
     <div className="App">
       <div className="parallax">
@@ -46,7 +46,7 @@ export default function App() {
           <span>*Note: click on the pin to track its location.</span>
         </p>
       </div>
-      {/* <MapImg></MapImg> */}
+      
       {museums ? <Form data={museums}></Form> : <div></div>}
     </div>
   );

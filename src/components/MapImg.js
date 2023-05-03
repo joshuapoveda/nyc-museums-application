@@ -1,20 +1,5 @@
-import {
-  interaction,
-  layer,
-  custom,
-  control,
-  Interactions,
-  Overlays,
-  Controls,
-  Map,
-  Layers,
-  Overlay,
-  Util,
-  Tile,
-  Vector,
-} from "react-openlayers";
 
-import { useEffect, useState } from "react";
+
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -32,27 +17,7 @@ export default function MapImg(props) {
 
   return (
     <>
-      {/* <div className="map-container"> */}
-      {/* <Map
-          className="map-item"
-          view={{ projection: "EPSG:4326", center: place, zoom: 17.5 }}
-        >
-          <Controls>
-            <control.FullScreen />
-            <control.ZoomSlider />
-            <control.ZoomToExtent />
-            <control.Zoom />
-          </Controls>
-          <Interactions
-            mouseWheelZoom={false}
-            dragAndDrop={false}
-            dragPan={false}
-            KeyboardPan={true}
-          ></Interactions>
-          <Layers>
-            <layer.Tile></layer.Tile>
-          </Layers>
-        </Map> */}
+     
 
       <div className="sticky">
         <MapContainer center={place} zoom={12.4} scrollWheelZoom={false}>
@@ -73,7 +38,7 @@ export default function MapImg(props) {
           </Marker>
         </MapContainer>
       </div>
-      {/* </div> */}
+      
     </>
   );
 }
